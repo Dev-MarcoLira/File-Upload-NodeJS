@@ -16,4 +16,14 @@ routes.post('/posts', multer(multerConfig).single('file'), async (req, res)=>{
     return res.json({ 'name': 'Marco Antonio'})
 })
 
+routes.get('/posts', (req, res)=>{
+
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+
+    return res.json({'name': 'Marco Antonio'})
+})
+
 module.exports = routes
